@@ -127,15 +127,87 @@
 # lotsofHello = " hello"*10
 # print(lotsofHello)
 
-even_numbers = [2, 4, 6, 8]
-odd_numbers = [1, 3, 5, 7]
-all_numbers = odd_numbers+even_numbers
-print(all_numbers)
+# even_numbers = [2, 4, 6, 8]
+# odd_numbers = [1, 3, 5, 7]
+# all_numbers = odd_numbers+even_numbers
+# print(all_numbers)
+# print('{} - {}'.format(even_numbers, odd_numbers))
+
+# number = int(input("Enter an integer: "))
+# if number < 100:
+#     print("Your number is smaller than 100")
+# else:
+#     print("Your number is greater than 100")
 
 # endregion
 
 
-# region Exercise
+# region Exercise 13
 
+# class Student(object):
+
+#     def __init__(self, name, branch, year):
+#         self.name = name
+#         self.branch = branch
+#         self.year = year
+#         print("A Student object is created")
+
+#     def print_details(self):
+
+#         print("Name:", self.name)
+#         print("Branch:", self.branch)
+#         print("Year:", self.year)
+
+# student = Student()
+# dir(student)
+
+class Person(object):
+    """
+    Returns a ```Person``` object with given name.
+
+    """
+    def __init__(self, name):
+        self.name = name
+
+    def get_details(self):
+        "Returns a string containing name of the person"
+        return self.name
+
+
+class Student(Person):
+    """
+    Returns a ```Student``` object, takes 3 arguments, name, branch, year.
+
+    """
+    def __init__(self, name, branch, year):
+        Person.__init__(self, name)
+        self.branch = branch
+        self.year = year
+
+    def get_details(self):
+        "Returns a string containing student's details."
+        return "%s studies %s and is in %s year." % (self.name, self.branch, self.year)
+
+
+class Teacher(Person):
+    """
+    Returns a ```Teacher``` object, takes a list of strings (list of papers) as
+    argument.
+    """
+    def __init__(self, name, papers):
+        Person.__init__(self, name)
+        self.papers = papers
+
+    def get_details(self):
+        return "%s teaches %s" % (self.name, ','.join(self.papers))
+
+
+person1 = Person('Sachin')
+student1 = Student('Kushal', 'CSE', 2005)
+teacher1 = Teacher('Prashad', ['C', 'C++'])
+
+print(person1.get_details())
+print(student1.get_details())
+print(teacher1.get_details())
 
 # endregion

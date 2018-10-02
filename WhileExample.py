@@ -59,7 +59,7 @@ def rangeMethod(firstNumber: str, secondNumber: int, stepNumber: int)->str:
     for i in range(firstNumber, secondNumber, stepNumber):
         print(i)
 
-    return print('Conguralation Finised')
+    return print('Conguralation Finished')
 
 
 rangeMethod(2, 15, 3)

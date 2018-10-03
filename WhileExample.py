@@ -54,21 +54,22 @@
 #     print(i)
 
 
-def rangeMethod(firstNumber: str, secondNumber: int, stepNumber: int)->str:
+# def rangeMethod(firstNumber: str, secondNumber: int, stepNumber: int)->str:
 
-    for i in range(firstNumber, secondNumber, stepNumber):
-        print(i)
+#     for i in range(firstNumber, secondNumber, stepNumber):
+#         print(i)
 
-    return print('Conguralation Finished')
+#     return print('Conguralation Finished')
 
 
-rangeMethod(2, 15, 3)
+# rangeMethod(2, 15, 3)
 
 
 # endregion
 ###############################################################################################################################################################
 
 # region Exercise 4
+
 
 # endregion
 ###############################################################################################################################################################
